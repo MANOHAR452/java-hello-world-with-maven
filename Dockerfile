@@ -11,8 +11,8 @@ RUN mvn clean package
 FROM openjdk:8-jre-alpine
 
 # copy jar file from previous stage
-COPY --from=builder target/my-app-1.0-SNAPSHOT.jar my-app-1.0-SNAPSHOT.jar 
+COPY --from=builder target/jb-hello-world-maven-0.2.0.jar jb-hello-world-maven-0.2.0.jar
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "my-app-1.0-SNAPSHOT.jar"]
+CMD ["java", "-jar", "jb-hello-world-maven-0.2.0.jar"]
