@@ -10,7 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/MANOHAR452/maven-hello-world.git'
+                git 'https://github.com/MANOHAR452/java-hello-world-with-maven.git'
                 sh "mvn clean package"
             }
         }
